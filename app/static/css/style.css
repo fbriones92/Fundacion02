@@ -1,0 +1,68 @@
+.login {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 250px;
+}
+
+
+.loginbox {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 350px;
+	height: 420px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,.5);
+	
+	
+}
+
+
+
+.user {
+	width: 100px;
+	height:100px;
+	
+	overflow: hidden;
+	position: absolute;
+	top: calc(-100px/2);
+	left: calc(50% - 50px);
+}
+
+.usern {
+	width: 100px;
+	height:100px;
+	
+	overflow: hidden;
+	
+	top: calc(-100px/2);
+	left: calc(50% - 50px);
+}
+
+input,
+select,
+textarea {
+    max-width: 200px;
+}
+
+label{
+	color: #ffffff;
+	border: 1px;
+}
+
+ p, h4 {
+	color: #ffffff;
+	border-radius: 0;
+}
+
+
+.validation-summary-errors {
+    color: #effc05;
+}
+
+.validation-summary-valid {
+    display: none;
+}
