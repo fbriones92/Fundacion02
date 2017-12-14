@@ -25,7 +25,7 @@ SECRET_KEY = '+9veq880ujl=650^mdldjvs_p^8f846n=s)fx(3r#i=3#=z!aa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'Fundacion02.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'fundacion2',
+        'NAME': 'fundacion',
         'USER': 'root',
         'PASSWORD': 'root',
     }

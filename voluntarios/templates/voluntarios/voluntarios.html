@@ -1,0 +1,51 @@
+{% extends 'voluntarios/voluntario_master.html'%}
+{% load staticfiles %}
+{% block tittle %}<span class="mdl-layout-title">Voluntarios</span>
+    <!-- <div class="mdl-layout-spacer"></div> -->
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search">
+              <label class="mdl-textfield__label" for="search" place-holder="buscar..">Enter your query...</label>
+            </div>
+          </div>{% endblock %}
+{% block contenido %}
+          <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+
+<table class="table">
+<thead class="alert-warning">
+<th style="color:blue;">ID</th>
+<th style="color:blue;">NOMBRES</th>
+<th style="color:blue;">APELLIDOS</th>
+<th style="color:blue;">MOVIL</th>
+<th style="color:blue;">E-MAIL</th>
+<th style="color:blue;">REFERENCIA</th> 
+<th style="color:blue;">ESTADO</th>
+<th style="color:blue; " >ACCIONES</th>
+</thead>
+<tbody>
+	{% for voluntario in voluntarios %}
+	<tr>
+		<td><b>{{ voluntario.id }}</b></td>
+		<td><b>{{ voluntario.nombres }}</b></td>
+		<td><b>{{ voluntario.apellidos }}</b></td>
+		<td><b>{{ voluntario.celular }}</b></td>
+		<td><b>{{ voluntario.correo }}</b></td>
+		<td><b>{% for referencia in voluntario.referencia.all %}
+							{{ referencia.parentesco }}--{{ referencia.nombres }}
+			{% endfor %}				
+		</b></td>
+		<td><b>{{ voluntario.get_estado_display }}</b></td>
+		<td><a class="btn btn-sm btn-warning" href="{% url 'voluntario' voluntario.id %}"><span class="glyphicon glyphicon-edit">Editar</span></a>
+		<a class="btn btn-sm btn-danger" href="{% url 'update' voluntario.id %}"><span class="glyphicon glyphicon-trash">Deshab</span></a></td>
+
+	</tr>
+</tbody>
+{% endfor %}
+</table>
+
+
+</div>
+{% endblock %}

@@ -7,7 +7,7 @@
 	<title>{{ title }} Fundacion Tacita</title>
 
     
-
+    <link rel="shortcut icon" href="{% static 'imagen/tclogo.jpg' %}">
 
 	<!-- referencias https -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
@@ -64,7 +64,7 @@
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" >home</i>Fundacion</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" >people</i>Voluntarios</a>
+          <a class="mdl-navigation__link" href="{% url 'voluntarios' %}"><i class="mdl-color-text--blue-grey-400 material-icons" >people</i>Voluntarios</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" >flag</i>Eventos</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" >delete</i>Trash</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" >report</i>Ayuda</a>

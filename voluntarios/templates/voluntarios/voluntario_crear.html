@@ -1,0 +1,14 @@
+{% extends "voluntarios/voluntario_master.html" %}
+
+{% block tittle %} <span class="mdl-layout-title">Nuevo Ingreso</span> {% endblock  %}
+{% block contenido %}
+<div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+<form  id="logoForm" action="" method="post" class="form-horizontal">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" name="enviar"	value="Grabar Voluntario" style="padding:8px;" />
+
+</form>
+</div>
+
+{% endblock %}
